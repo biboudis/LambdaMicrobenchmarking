@@ -111,7 +111,7 @@ namespace LambdaMicrobenchmarking
                 measurements[i] = sw.ElapsedMilliseconds;
             }
 
-            Console.WriteLine("{0,-25}\t{1,10} {2,10:0.00} {3,4:0.00} {4}", 
+            Console.WriteLine("{0,-25}\t{1,10} {2,10:0.00} {3,6:0.00} {4,5}", 
                 title, 
                 GetMean(), 
                 GetMeanErrorAt(0.999), 

@@ -22,11 +22,11 @@ namespace LambdaMicrobenchmarking.Test
                                          from y in vLow
                                          select x * y).Sum();
 
-            Script<long>.Of(
+            Script<long>.Of(new Tuple<String, Func<long>>[] {
                     Tuple.Create("sumLinq",   sumLinq), 
                     Tuple.Create("sumSqLinq", sumSqLinq), 
                     Tuple.Create("sumSqEvensLinq", sumSqEvenLinq),
-                    Tuple.Create("cartLinq", cartLinq))
+                    Tuple.Create("cartLinq", cartLinq)})
                 .RunAll();
         }
     }
