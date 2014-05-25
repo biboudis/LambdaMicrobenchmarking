@@ -1,8 +1,8 @@
 Lambda Microbenchmarking
 =======================
 
-This is an initial code for a microbenchmarking facility only for lambdas.
-Currently it supports only lambdas returning a value.
+This is an initial code for a microbenchmarking facility only lambdas for C# and F#.
+Currently it supports functions returning a value.
 
 ```C#
 Func<long> sumLinq = () => v.Sum();
@@ -18,4 +18,13 @@ Script<long>.Of(
         Tuple.Create("sumSqEvensLinq", sumSqEvenLinq),
         Tuple.Create("cartLinq", cartLinq))
     .RunAll();
+```
+
+The corresponding script for F#:
+```F#
+let script = [|
+   ("sumLinq", Func<int64> sumLinq);
+   ("sumSqLinq", Func<int64> sumSqLinq);
+   ("sumSqEvenLinq", Func<int64> sumSqEvenLinq);
+   ("cartLinq", Func<int64> cartLinq)|] |> fun x -> Script.Of x
 ```
