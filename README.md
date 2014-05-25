@@ -26,4 +26,6 @@ let script = [|
    ("sumSqLinq", Func<int64> sumSqLinq);
    ("sumSqEvenLinq", Func<int64> sumSqEvenLinq);
    ("cartLinq", Func<int64> cartLinq)|] |> fun x -> Script.Of x
+   
+script.RunAll() |> ignore
 ```
