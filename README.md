@@ -29,3 +29,6 @@ let script = [|
    
 script.RunAll() |> ignore
 ```
+
+Inspired by JMH. ([AbstractStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/AbstractStatistics.java), [ListStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/ListStatistics.java)
+ 
