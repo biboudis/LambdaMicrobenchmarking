@@ -19,7 +19,6 @@ Script<long>.Of(
         Tuple.Create("cartLinq", cartLinq))
     .RunAll();
 ```
-
 The corresponding script for F#:
 ```F#
 let script = [|
