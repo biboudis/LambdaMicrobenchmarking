@@ -18,8 +18,8 @@ let main argv =
 
     let script = [|
         ("sumLinq", Func<int64> sumLinq); 
-        ("sumSqLinq", Func<int64> sumSqLinq);
-        ("sumSqEvenLinq", Func<int64> sumSqEvenLinq);
+        ("sumOfSquaresLinq", Func<int64> sumSqLinq);
+        ("sumOfSquaresEvenLinq", Func<int64> sumSqEvenLinq);
         ("cartLinq", Func<int64> cartLinq)|] |> fun x -> Script.Of x
 
     script.RunAll() |> ignore
