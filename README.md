@@ -1,7 +1,7 @@
 Lambda Microbenchmarking
 ========================
 
-This is an initial code for a microbenchmarking facility* only lambdas for C# and F#.
+This is an initial code for a microbenchmarking facility* for testing C# and F# lambdas.
 Currently it supports functions returning a value.
 
 ```C#
@@ -30,5 +30,5 @@ let script = [|
 script.RunAll() |> ignore
 ```
 
-* the statistics part is inspired by [JMH](http://openjdk.java.net/projects/code-tools/jmh/) ([AbstractStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/AbstractStatistics.java), [ListStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/ListStatistics.java)).
+\* the statistics part is inspired by [JMH](http://openjdk.java.net/projects/code-tools/jmh/) ([AbstractStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/AbstractStatistics.java), [ListStatistics](http://hg.openjdk.java.net/code-tools/jmh/file/75f8b23444f6/jmh-core/src/main/java/org/openjdk/jmh/util/internal/ListStatistics.java)).
  
