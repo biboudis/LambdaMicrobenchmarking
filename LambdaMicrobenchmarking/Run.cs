@@ -108,7 +108,9 @@ namespace LambdaMicrobenchmarking
 
                 sw.Stop();
 
-                measurements[i] = sw.ElapsedMilliseconds;
+                TimeSpan ts = sw.Elapsed;
+                measurements[i] = ts.TotalMilliseconds;
+                Console.WriteLine("Milliseconds: {0}", measurements[i]);
             }
 
             Console.WriteLine("{0,-25}\t{1,10:0.000} {2,10:0.000} {3,6:0.000} {4,5}", 
