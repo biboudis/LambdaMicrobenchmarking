@@ -108,9 +108,15 @@ namespace LambdaMicrobenchmarking
 
                 sw.Stop();
 
+                //Force Full GC prior to execution
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+
                 TimeSpan ts = sw.Elapsed;
                 measurements[i] = ts.TotalMilliseconds;
-                Console.WriteLine("Milliseconds: {0}", measurements[i]);
+                //TODO: Introduce verbose command
+                //Console.WriteLine("Milliseconds: {0}", measurements[i]);
             }
 
             Console.WriteLine("{0,-25}\t{1,10:0.000} {2,10:0.000} {3,6:0.000} {4,5}", 

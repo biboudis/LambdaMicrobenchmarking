@@ -10,6 +10,7 @@ namespace LambdaMicrobenchmarking
     {
         static public int Iterations { get; set; }
         static public int WarmupIterations { get; set; }
+
         private Tuple<String, Func<T>>[] actions { get; set; }
 
         private Script(params Tuple<String, Func<T>>[] actions)
@@ -22,10 +23,14 @@ namespace LambdaMicrobenchmarking
             return new Script<T>(actions);
         }
 
-        public Script<T> RunAll()
+        public Script<T> WithHead()
         {
             Console.WriteLine("{0,-25} \t{1,10} {2,6:0.00} {3,6:0.00} {4,5}", "Benchmark", "Mean", "Mean-Error", "Sdev", "Unit");
+            return this;
+        }
 
+        public Script<T> RunAll()
+        {
             actions.Select(action => new Run<T>(action)).ToList().ForEach(run => run.Measure());
             return this;
         }
