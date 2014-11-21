@@ -1,8 +1,6 @@
-version: 
-	0.1.0.{build}
+version: 0.1.0.{build}
 
-configuration: 
-	Release
+configuration: Release
 
 before_build:
-	nuget restore	
+  - nuget restore
