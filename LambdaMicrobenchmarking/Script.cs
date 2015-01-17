@@ -6,21 +6,39 @@ using System.Threading.Tasks;
 
 namespace LambdaMicrobenchmarking
 {
+
+    public static class Script
+    {
+        public static Script<T> Of<T>(params Tuple<String, Func<T>>[] actions)
+        {
+            return Script<T>.Of(actions);
+        }
+        public static Script<T> Of<T>(String name, Func<T> action)
+        {
+            return Of(Tuple.Create(name, action));
+        }
+    }
     public class Script<T>
     {
         static public int Iterations { get; set; }
         static public int WarmupIterations { get; set; }
 
-        private Tuple<String, Func<T>>[] actions { get; set; }
+        private List<Tuple<String, Func<T>>> actions { get; set; }
 
         private Script(params Tuple<String, Func<T>>[] actions)
         {
-            this.actions = actions;
+            this.actions = actions.ToList();
         }
 
-        public static Script<T> Of(Tuple<String, Func<T>>[] actions)
+        public static Script<T> Of(params Tuple<String, Func<T>>[] actions)
         {
             return new Script<T>(actions);
+        }
+
+        public Script<T> Of(String name, Func<T> action)
+        {
+            actions.Add(Tuple.Create(name,action));
+            return this;
         }
 
         public Script<T> WithHead()
