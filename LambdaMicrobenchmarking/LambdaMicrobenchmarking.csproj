@@ -87,6 +87,7 @@
     <Compile Include="Script.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LambdaMicrobenchmarking.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
