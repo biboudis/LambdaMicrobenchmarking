@@ -1,6 +1,9 @@
 ## Lambda Microbenchmarking
 [![Build status](https://ci.appveyor.com/api/projects/status/kk8gk4cw9lre9fp7/branch/master?svg=true)](https://ci.appveyor.com/project/biboudis/lambdamicrobenchmarking/branch/master)
 
+> To install [LambdaMicrobenchmarking](https://www.nuget.org/packages/LambdaMicrobenchmarking/) via NuGet, run the following command in the [Package Manager Console ](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) 
+>> ```PM> Install-Package LambdaMicrobenchmarking```
+
 This is an initial code for a microbenchmarking facility* for testing C# and F# lambdas.
 Currently it supports functions returning a value.
 
