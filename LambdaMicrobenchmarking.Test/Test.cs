@@ -8,9 +8,6 @@ namespace LambdaMicrobenchmarking.Test
 {
     public class Test
     {
-        static Object obj = new object();
-        static WeakReference<object> wroG = new WeakReference<object>(obj);
-        static WeakReference wro = new WeakReference(obj); 
         public static void Main(string[] args)
         {
             var N = 10000000;
