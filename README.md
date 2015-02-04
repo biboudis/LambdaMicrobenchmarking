@@ -1,10 +1,9 @@
 ## Lambda Microbenchmarking
 [![Build status](https://ci.appveyor.com/api/projects/status/kk8gk4cw9lre9fp7/branch/master?svg=true)](https://ci.appveyor.com/project/biboudis/lambdamicrobenchmarking/branch/master)
+[![NuGet](https://img.shields.io/nuget/v/lambdamicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
+[![NuGet total](https://img.shields.io/nuget/dt/LambdaMicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 
-> To install [LambdaMicrobenchmarking](https://www.nuget.org/packages/LambdaMicrobenchmarking/) via NuGet, run the following command in the [Package Manager Console ](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) 
->> ```PM> Install-Package LambdaMicrobenchmarking```
-
-This is an initial code for a microbenchmarking facility* for testing C# and F# lambdas.
+This is an initial approach for a microbenchmarking facility* for measuring C# and F# lambdas execution time.
 Currently it supports functions returning a value.
 
 ```C#
