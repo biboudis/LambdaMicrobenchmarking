@@ -1,4 +1,4 @@
-## LM: Lambda Microbenchmarking tool for C# and F#.
+## LambdaMicrobenchmarking: microbenchmarking tool for C# and F#.
 [![Build status](https://ci.appveyor.com/api/projects/status/kk8gk4cw9lre9fp7/branch/master?svg=true)](https://ci.appveyor.com/project/biboudis/lambdamicrobenchmarking/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/lambdamicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 [![NuGet total](https://img.shields.io/nuget/dt/LambdaMicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
