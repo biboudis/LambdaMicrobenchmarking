@@ -1,10 +1,9 @@
-## Lambda Microbenchmarking
+## LM: Lambda Microbenchmarking tool for C# and F#.
 [![Build status](https://ci.appveyor.com/api/projects/status/kk8gk4cw9lre9fp7/branch/master?svg=true)](https://ci.appveyor.com/project/biboudis/lambdamicrobenchmarking/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/lambdamicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 [![NuGet total](https://img.shields.io/nuget/dt/LambdaMicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 
-This is an initial approach for a microbenchmarking facility* for measuring C# and F# lambdas execution time.
-Currently it supports functions returning a value.
+LambdaMicrobenchmarking is a library for microbenchmarking orchestration in C# and F#. The programer can measure the execution performance of thunks (lambdas with no arguments).
 
 ```C#
 Func<long> sumLinq       = () => v.Sum();
@@ -44,3 +43,6 @@ cartLinq        200,775           6,477 4,284 ms/op
 * [Clash of the Lambdas](http://biboudis.github.io/clashofthelambdas/)
 * [Microbenchmarks in Java and C#](http://www.itu.dk/people/sestoft/papers/benchmarking.pdf)
 * [JMH](http://openjdk.java.net/projects/code-tools/jmh/)
+
+### Contributing
+Sending PRs and participating in the discussion for improving LM is **highly** encouraged. Our goal is to create a tool for .NET that produces valid results, giving real control over the intented experiments.
