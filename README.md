@@ -3,8 +3,9 @@
 [![NuGet](https://img.shields.io/nuget/v/lambdamicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 [![NuGet total](https://img.shields.io/nuget/dt/LambdaMicrobenchmarking.svg?style=flat)](https://www.nuget.org/packages/LambdaMicrobenchmarking/)
 
-LambdaMicrobenchmarking is a library for microbenchmarking orchestration in C# and F#. The programer can measure the execution performance of thunks (lambdas with no arguments).
+![LambdaMicrobenchmarking: microbenchmarking tool for C# and F#](http://cgi.di.uoa.gr/~biboudis/images/logo.png) 
 
+LambdaMicrobenchmarking is a library for microbenchmarking orchestration in C# and F#. The programer can measure the execution performance of thunks (lambdas with no arguments).
 ```C#
 Func<long> sumLinq       = () => v.Sum();
 Func<long> sumSqLinq     = () => v.Select(x => x * x).Sum();
