@@ -21,7 +21,6 @@ let main argv =
         ("sumOfSquaresLinq", Func<int64> sumSqLinq);
         ("sumOfSquaresEvenLinq", Func<int64> sumSqEvenLinq);
         ("cartLinq", Func<int64> cartLinq)|] |> fun x -> Script.Of x
-
         
     let script2 = [|
         ("sumLinq", Func<int64> sumLinq); 
@@ -33,5 +32,12 @@ let main argv =
     script.RunAll() |> ignore
 
     script2.RunAll() |> ignore
+
+    Script.Of("sumLinq", Func<int64> sumLinq)
+          .Of("sumOfSquaresLinq", Func<int64> sumSqLinq)
+          .Of("sumOfSquaresEvenLinq", Func<int64> sumSqEvenLinq)
+          .Of("cartLinq", Func<int64> cartLinq)
+          .WithHead()
+          .RunAll |> ignore
 
     0
