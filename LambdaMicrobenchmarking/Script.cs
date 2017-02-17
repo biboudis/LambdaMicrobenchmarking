@@ -20,8 +20,17 @@ namespace LambdaMicrobenchmarking
     }
     public class Script<T>
     {
-        static public int Iterations { get; set; }
-        static public int WarmupIterations { get; set; }
+        static public int Iterations
+        {
+            get { return Run<T>.iterations; }
+            set { Run<T>.iterations = value; }
+        }
+
+        static public int WarmupIterations
+        {
+            get { return Run<T>.warmups; }
+            set { Run<T>.warmups = value; }
+        }
 
         private List<Tuple<String, Func<T>>> actions { get; set; }
 
