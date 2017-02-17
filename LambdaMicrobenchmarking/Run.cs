@@ -13,7 +13,7 @@ namespace LambdaMicrobenchmarking
         private string title;
         private double[] measurements;
         private Func<T> func;
-        private static int iterations = 10;
+        internal static int iterations = 10;
 
         public Run(Tuple<String, Func<T>> runTuple)
         {
