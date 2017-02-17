@@ -26,7 +26,11 @@ namespace LambdaMicrobenchmarking
             set { Run<T>.iterations = value; }
         }
 
-        static public int WarmupIterations { get; set; }
+        static public int WarmupIterations
+        {
+            get { return Run<T>.warmups; }
+            set { Run<T>.warmups = value; }
+        }
 
         private List<Tuple<String, Func<T>>> actions { get; set; }
 

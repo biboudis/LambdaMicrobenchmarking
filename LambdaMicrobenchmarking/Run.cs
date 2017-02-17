@@ -14,6 +14,7 @@ namespace LambdaMicrobenchmarking
         private double[] measurements;
         private Func<T> func;
         internal static int iterations = 10;
+        internal static int warmups = 3;
 
         public Run(Tuple<String, Func<T>> runTuple)
         {
@@ -98,7 +99,8 @@ namespace LambdaMicrobenchmarking
             var sw = new Stopwatch();
 
             // First invocation to compile method.
-            Compiler.ConsumeValue(func());
+            for (int i = 0; i < warmups; i++)
+                Compiler.ConsumeValue(func());
 
             for (int i = 0; i < GetN(); i++)
             {
