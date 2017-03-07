@@ -13,11 +13,13 @@ namespace LambdaMicrobenchmarking
         {
             return Script<T>.Of(actions);
         }
+
         public static Script<T> Of<T>(String name, Func<T> action)
         {
             return Of(Tuple.Create(name, action));
         }
     }
+
     public class Script<T>
     {
         static public int Iterations
