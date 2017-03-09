@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LambdaMicrobenchmarking
 {
@@ -13,11 +12,13 @@ namespace LambdaMicrobenchmarking
         {
             return Script<T>.Of(actions);
         }
+
         public static Script<T> Of<T>(String name, Func<T> action)
         {
             return Of(Tuple.Create(name, action));
         }
     }
+
     public class Script<T>
     {
         static public int Iterations
@@ -30,6 +31,12 @@ namespace LambdaMicrobenchmarking
         {
             get { return Run<T>.warmups; }
             set { Run<T>.warmups = value; }
+        }
+
+        public static double MinRunningSecs
+        {
+            get { return Run<T>.minimumSecs; }
+            set { Run<T>.minimumSecs = value; }
         }
 
         private List<Tuple<String, Func<T>>> actions { get; set; }
@@ -52,7 +59,7 @@ namespace LambdaMicrobenchmarking
 
         public Script<T> WithHead()
         {
-            Console.WriteLine("{0,-25} \t{1,10} {2,6:0.00} {3,6:0.00} {4,5}", "Benchmark", "Mean", "Mean-Error", "Sdev", "Unit");
+            Console.WriteLine(Run<T>.FORMAT, "Benchmark", "Mean", "Mean-Error", "Sdev", "Unit", "Count");
             return this;
         }
 

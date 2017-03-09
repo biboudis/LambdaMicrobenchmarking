@@ -1,0 +1,12 @@
+# Automatically convert line endings to the natives ones on checkout, but keep LF in repository
+* text=auto
+
+*.cs text
+*.sln text eol=crlf
+
+# Don't touch binary files.
+*.dll binary
+*.exe binary
+*.md  binary
+*.pdb binary
+*.suo binary
